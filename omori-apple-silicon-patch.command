@@ -54,7 +54,7 @@ mv "./OMORI.app" "${OMORI}/OMORI.app"
 
 echo ""
 echo "Done! Launch OMORI through Steam."
-echo "Note that if you update OMORI or check the integrety of the game files, you'll need to reapply the patch."
+echo "Note that if you update OMORI or check the integrity of the game files, you'll need to reapply the patch."
 echo ""
 echo ""
 
