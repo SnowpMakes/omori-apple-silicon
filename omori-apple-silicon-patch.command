@@ -2,7 +2,8 @@
 
 echo ""
 echo "/-------------------------------------------\\"
-echo "|       OMORI APPLE SILICON PATCH TOOL      |"
+echo "|     - OMORI APPLE SILICON PATCH TOOL -    |"
+echo "|             by Snowp and ynx0             |"
 echo "|                                           |"
 echo "| github.com/SnowpMakes/omori-apple-silicon |"
 echo "|             https://snowp.io              |"
@@ -29,8 +30,10 @@ mv "${OMORI}/OMORI.app" "./OMORI.original.app";
 
 echo "Downloading nwjs.."
 curl -# -o nwjs.zip https://dl.nwjs.io/live-build/nw77/20230531-164722/7323cc662/v0.77.0/nwjs-v0.77.0-osx-arm64.zip
+echo "Downloading node polyfill patch.."
+curl -#L -o node-polyfill-patch.js https://github.com/SnowpMakes/omori-apple-silicon/releases/download/v1.1.0/node-polyfill-patch.js
 echo "Downloading greenworks patches.."
-curl -#L -o greenworks.js https://github.com/SnowpMakes/greenworks-arm64/releases/download/v1.0.0/greenworks-omori.js
+curl -#L -o greenworks.js https://github.com/SnowpMakes/omori-apple-silicon/releases/download/v1.1.0/greenworks.js
 curl -#L -o greenworks-osxarm64.node https://github.com/SnowpMakes/greenworks-arm64/releases/download/v1.0.0/greenworks-osxarm64.node
 echo "Downloading steamworks api.."
 curl -# -o steam.zip https://dl.snowp.io/omori-apple-silicon/steam.zip
@@ -44,6 +47,7 @@ echo "Patching game.."
 mv ./nwjs-v0.77.0-osx-arm64/nwjs.app ./OMORI.app
 mv -f ./OMORI.original.app/Contents/Resources/app.nw ./OMORI.app/Contents/Resources/
 mv -f ./OMORI.original.app/Contents/Resources/app.icns ./OMORI.app/Contents/Resources/
+mv -f ./node-polyfill-patch.js ./OMORI.app/Contents/Resources/app.nw/js/libs/
 mv -f ./greenworks.js ./OMORI.app/Contents/Resources/app.nw/js/libs/
 mv -f ./greenworks-osxarm64.node ./OMORI.app/Contents/Resources/app.nw/js/libs/
 mv -f ./steam/libsteam_api.dylib ./OMORI.app/Contents/Resources/app.nw/js/libs/
