@@ -8,7 +8,7 @@ Make sure you have Steam installed, and OMORI is downloaded within Steam. Launch
 
 ### Download
 
-Download the patch script (omori-apple-silicon-patch.command) from the [releases](https://github.com/SnowpMakes/omori-apple-silicon/releases/latest) page.
+Download the latest version of the patch script (omori-apple-silicon-patch.command) from the [releases](https://github.com/SnowpMakes/omori-apple-silicon/releases/latest) page.
 
 ### Run the patch
 
