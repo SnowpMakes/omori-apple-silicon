@@ -29,7 +29,7 @@ cd $TMPFOLDER;
 mv "${OMORI}/OMORI.app" "./OMORI.original.app";
 
 echo "Downloading nwjs.."
-curl -# -o nwjs.zip https://dl.nwjs.io/live-build/nw77/20230531-164722/7323cc662/v0.77.0/nwjs-v0.77.0-osx-arm64.zip
+curl -# -o nwjs.zip https://dl.nwjs.io/v0.77.0/nwjs-v0.77.0-osx-arm64.zip
 echo "Downloading node polyfill patch.."
 curl -#L -o node-polyfill-patch.js https://github.com/SnowpMakes/omori-apple-silicon/releases/download/v1.1.0/node-polyfill-patch.js
 echo "Downloading greenworks patches.."
