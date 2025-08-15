@@ -29,7 +29,7 @@ cd $TMPFOLDER;
 mv "${OMORI}/OMORI.app" "./OMORI.original.app";
 
 echo "Downloading nwjs.."
-curl -# -o nwjs.zip https://dl.nwjs.io/v0.77.0/nwjs-v0.77.0-osx-arm64.zip
+curl -#L -o nwjs.zip https://dl.nwjs.io/v0.102.1/nwjs-v0.102.1-osx-arm64.zip
 echo "Downloading node polyfill patch.."
 curl -#L -o node-polyfill-patch.js https://github.com/SnowpMakes/omori-apple-silicon/releases/download/v1.1.0/node-polyfill-patch.js
 echo "Downloading greenworks patches.."
@@ -44,7 +44,7 @@ echo "Extracting steamworks.."
 unzip -qq steam.zip
 
 echo "Patching game.."
-mv ./nwjs-v0.77.0-osx-arm64/nwjs.app ./OMORI.app
+mv "./nwjs-v0.102.1-osx-arm64/nwjs.app" "./OMORI.app"
 mv -f ./OMORI.original.app/Contents/Resources/app.nw ./OMORI.app/Contents/Resources/
 mv -f ./OMORI.original.app/Contents/Resources/app.icns ./OMORI.app/Contents/Resources/
 mv -f ./node-polyfill-patch.js ./OMORI.app/Contents/Resources/app.nw/js/libs/
